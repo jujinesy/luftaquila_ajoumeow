@@ -1,0 +1,13 @@
+[Unit]
+Description=Ajoumeow Backend Server
+Wants=network-online.target
+After=network.target network-online.target
+
+[Service]
+Type=simple
+WorkingDirectory=/home/luftaquila/HDD/ajoumeow/server
+ExecStart=/usr/local/bin/node /home/luftaquila/HDD/ajoumeow/server/server.js
+Restart=always
+
+[Install]
+WantedBy=multi-user.target
